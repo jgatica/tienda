@@ -12,7 +12,7 @@ Coded by Creative Tim
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8" />
@@ -83,7 +83,9 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
     </div>
 </nav>
-@yield('content')
+<div class="wrapper">
+    @yield('content')
+</div>
 <!--   Core JS Files   -->
 <script src="{{ asset('assets/material-kit//js/core/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/material-kit/js/core/popper.min.js') }}" type="text/javascript"></script>
