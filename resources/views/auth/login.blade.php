@@ -8,7 +8,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 ml-auto mr-auto">
                     <div class="card card-login">
-                        <form class="form" method="" action="">
+                        <form class="form" method="POST" action="{{ route('login') }}">
+
                             @csrf
 
                             <div class="card-header card-header-primary text-center">
@@ -33,7 +34,9 @@
                       <i class="material-icons">face</i>
                     </span>
                                     </div>
-                                    <input id="name" type="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="name"
+                                           class="form-control @error('name') is-invalid @enderror" name="name"
+                                           value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -47,7 +50,9 @@
                       <i class="material-icons">mail</i>
                     </span>
                                     </div>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email"
+                                           class="form-control @error('email') is-invalid @enderror" name="email"
+                                           value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -61,7 +66,9 @@
                       <i class="material-icons">lock_outline</i>
                     </span>
                                     </div>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <input id="password" type="password"
+                                           class="form-control @error('password') is-invalid @enderror" name="password"
+                                           required autocomplete="current-password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
