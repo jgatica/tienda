@@ -78,7 +78,10 @@
                                 </div>
                             </div>
                             <div class="footer text-center">
-                                <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Comenzar !</a>
+                                <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg" onclick="this.closest('form').submit();return false;">Comenzar !</a>
+                                {{--<button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>--}}
                             </div>
                         </form>
                     </div>
