@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('body-class', 'login-page sidebar-collapse')
+
 @section('content')
     <div class="page-header header-filter" style="background-image: url('{{ asset('assets/material-kit//img/bg7.jpg') }}'); background-size: cover; background-position: top center;">
         <div class="container">

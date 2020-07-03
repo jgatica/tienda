@@ -31,7 +31,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 </head>
 
-<body class="login-page sidebar-collapse">
+<body class="@yield('body-class', 'ninguna')" >
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
