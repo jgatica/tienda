@@ -13,7 +13,7 @@
                             @csrf
 
                             <div class="card-header card-header-primary text-center">
-                                <h4 class="card-title">Login</h4>
+                                <h4 class="card-title">Inicio de sesión</h4>
                                 <div class="social-line">
                                     <a href="#pablo" class="btn btn-just-icon btn-link">
                                         <i class="fa fa-facebook-square"></i>
@@ -26,7 +26,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="description text-center">Or Be Classical</p>
+                            <p class="description text-center">Ingresa tus datos</p>
                             <div class="card-body">
                                 {{--<div class="input-group">
                                     <div class="input-group-prepend">
@@ -76,7 +76,15 @@
                                     </span>
                                     @enderror
                                 </div>
+
+                                    <div class="checkbox">
+                                        <label class="form-check-label" for="remember">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                            {{ __('Remember Me') }}
+                                        </label>
+                                    </div>
                             </div>
+
                             <div class="footer text-center">
                                 <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg" onclick="this.closest('form').submit();return false;">Comenzar !</a>
                                 {{--<button type="submit" class="btn btn-primary">
