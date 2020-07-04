@@ -28,7 +28,7 @@
                             </div>
                             <p class="description text-center">Or Be Classical</p>
                             <div class="card-body">
-                                <div class="input-group">
+                                {{--<div class="input-group">
                                     <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="material-icons">face</i>
@@ -43,7 +43,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div>
+                                </div>--}}
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                     <span class="input-group-text">
