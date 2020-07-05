@@ -14,6 +14,7 @@
 
                             <div class="card-header card-header-primary text-center">
                                 <h4 class="card-title">Inicio de sesión</h4>
+{{--                                Registro con redes sociales(iconos)
                                 <div class="social-line">
                                     <a href="#pablo" class="btn btn-just-icon btn-link">
                                         <i class="fa fa-facebook-square"></i>
@@ -24,7 +25,7 @@
                                     <a href="#pablo" class="btn btn-just-icon btn-link">
                                         <i class="fa fa-google-plus"></i>
                                     </a>
-                                </div>
+                                </div>--}}
                             </div>
                             <p class="description text-center">Ingresa tus datos</p>
                             <div class="card-body">
