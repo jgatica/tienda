@@ -69,29 +69,22 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                     </li>--}}
                 @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <li class="dropdown nav-item">
+                        <a href="{{ route('login') }}" class="dropdown-toggle nav-link" data-toggle="dropdown">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown nav-item">
-                                <a href="{{ route('login') }}" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <i class="material-icons">apps</i> Components
-                                </a>
-                                <ul class="dropdown-menu dropdown-with-icons">
-                                    <a href="{{ route('logout') }}" class="dropdown-item"
-                                       onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();"
-                                    >
-                                        <i class="material-icons">layers</i> Desconectar
-                                    </a>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                <i class="material-icons">layers</i> Desconectar
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="post"
+                                  style="display: none;"
+                            >
+                                @csrf
+                            </form>
+                        </div>
                     </li>
-
-
-
                 @endguest
 
                 {{--Enlaces redes sociales
