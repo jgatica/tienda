@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('body-class', 'login-page sidebar-collapse')
+@section('body-class', 'landing-page sidebar-collapse')
 
 @section('content')
     {{--header para landing--}}
@@ -70,7 +70,7 @@
                             <div class="team-player">
                                 <div class="card card-plain">
                                     <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        <img src="{{ asset('assets/material-kit/img/faces/avatar.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                                     </div>
                                     <h4 class="card-title">Gigi Hadid
                                         <br>
@@ -92,7 +92,7 @@
                             <div class="team-player">
                                 <div class="card card-plain">
                                     <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="../assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        <img src="{{ asset('assets/material-kit/img/faces/christian.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                                     </div>
                                     <h4 class="card-title">Christian Louboutin
                                         <br>
@@ -113,7 +113,7 @@
                             <div class="team-player">
                                 <div class="card card-plain">
                                     <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="../assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        <img src="{{ asset('assets/material-kit/img/faces/kendall.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                                     </div>
                                     <h4 class="card-title">Kendall Jenner
                                         <br>
