@@ -13,6 +13,8 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         // Aca se hace uso de los model factories
+        factory(\App\Category::class, 5)->create();
         factory(Product::class, 100)->create();
+        factory(\App\ProductImage::class, 200)->create();
     }
 }
