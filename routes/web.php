@@ -16,3 +16,8 @@ Route::get('/', 'TestController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Administracion de productos
+Route::get('/admin/products', 'ProductController@index');
+Route::get('/admin/products/create', 'ProductController@create');
+Route::post('/admin/products', 'ProductController@store');
