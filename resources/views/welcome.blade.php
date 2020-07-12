@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Bienvenido a App Shop')
+
 @section('body-class', 'landing-page sidebar-collapse')
 
 @section('content')
