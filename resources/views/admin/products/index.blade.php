@@ -2,73 +2,57 @@
 
 @section('title', 'Bienvenido a App Shop')
 
-@section('body-class', 'landing-page sidebar-collapse')
+@section('body-class', 'profile-page sidebar-collapse')
 
 @section('content')
     {{--header para landing--}}
     <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/material-kit/img/profile_city.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="title">Bienvenidos a App Shop</h1>
-                    <h4>Realiza pedidos en linea y te contactaremos para coordinar la entrega</h4>
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
-                        <i class="fa fa-play"></i> Como funciona
-                    </a>
-                </div>
-            </div>
-        </div>
+
     </div>
     {{--header para landing--}}
 
     {{--contenido para el landing--}}
     <div class="main main-raised">
         <div class="container">
-            <div class="section text-center">
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="title">Hablemos de producto</h2>
-                        <h5 class="description">Puedes revisar nuestra relación completa de productos, comparar precios y realizar tus pedidos cuando estes seguro</h5>
-                    </div>
-                </div>
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-info">
-                                    <i class="material-icons">chat</i>
-                                </div>
-                                <h4 class="info-title">Atendemos tus dudas</h4>
-                                <p>Atendemos rápidamente cualquier consulta que tengas via chat. No estas solo, sino que siempre estamos atentos a tus inquietudes.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-success">
-                                    <i class="material-icons">verified_user</i>
-                                </div>
-                                <h4 class="info-title">Pago seguro</h4>
-                                <p>Todo pedido que realices sera confirmado a traves de una llamada. Si no confias en los pagos en linea puedes pagar contra entrega el valor acordado</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-danger">
-                                    <i class="material-icons">fingerprint</i>
-                                </div>
-                                <h4 class="info-title">Informacion privada</h4>
-                                <p>Los pedidos que realices solo los conocerás tu a través de tu panel de usuario. Nadie mas tiene acceso a esta información</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="section text-center">
                 <h2 class="title">Productos disponibles</h2>
                 <div class="team">
                     <div class="row">
-                        @foreach($products as $product)
+
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th>Name</th>
+                                <th>Job Position</th>
+                                <th>Since</th>
+                                <th class="text-right">Salary</th>
+                                <th class="text-right">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>Andrew Mike</td>
+                                <td>Develop</td>
+                                <td>2013</td>
+                                <td class="text-right">&euro; 99,225</td>
+                                <td class="td-actions text-right">
+                                    <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                                        <i class="fa fa-user"></i>
+                                    </button>
+                                    <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        @foreach($productos as $product)
                         <div class="col-md-4">
                             <div class="team-player">
                                 <div class="card card-plain">
