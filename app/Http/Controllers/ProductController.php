@@ -15,7 +15,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        view('admin.products.index');
+        view('admin.products.create');
     }
 
     public function store()
