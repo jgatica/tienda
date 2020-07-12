@@ -77,7 +77,7 @@
                                     </div>
                                     <h4 class="card-title">{{ $product->name }}
                                         <br>
-                                        <small class="card-description text-muted">Model</small>
+                                        <small class="card-description text-muted">{{ $product->category->name }}</small>
                                     </h4>
                                     <div class="card-body">
                                         <p class="card-description">
