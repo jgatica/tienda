@@ -24,20 +24,21 @@
                             <thead>
                             <tr>
                                 <th class="text-center">#</th>
-                                <th>Name</th>
-                                <th>Job Position</th>
-                                <th>Since</th>
-                                <th class="text-right">Salary</th>
-                                <th class="text-right">Actions</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Categoria</th>
+                                <th class="text-right">Precio</th>
+                                <th class="text-right">Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($productos as $producto)
                             <tr>
-                                <td class="text-center">1</td>
-                                <td>Andrew Mike</td>
-                                <td>Develop</td>
-                                <td>2013</td>
-                                <td class="text-right">&euro; 99,225</td>
+                                <td class="text-center">{{ $producto->id }}</td>
+                                <td>{{ $producto->name }}</td>
+                                <td>{{ $producto->description }}</td>
+                                <td>{{ $producto->category->name }}</td>
+                                <td class="text-right">&euro; {{ $producto->price }}</td>
                                 <td class="td-actions text-right">
                                     <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
                                         <i class="fa fa-user"></i>
@@ -50,6 +51,7 @@
                                     </button>
                                 </td>
                             </tr>
+                            @endforeach
                             </tbody>
                         </table>
                         @foreach($productos as $product)
