@@ -20,6 +20,8 @@
                 <div class="team">
                     <div class="row">
 
+                        <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round">Nuevo producto</a>
+
                         <table class="table">
                             <thead>
                             <tr>
