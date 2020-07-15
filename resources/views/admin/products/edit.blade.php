@@ -19,7 +19,7 @@
         <div class="container">
             <div class="section">
                 <h2 class="title text-center">Registrar nuevo producto</h2>
-                <form method="post" action="{{ url('/admin/products') }}" >
+                <form method="post" action="{{ url('/admin/products/'.$producto->name.'/update') }}" >
                     @csrf
              {{--       $table->string('name');
                     $table->string('description');
@@ -29,21 +29,21 @@
                         <div class="col-md-6">
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Nombre del producto</label>
-                                <input type="text" name="name" class="form-control">
+                                <input type="text" name="name" class="form-control" value="{{ $producto->name }}">
                             </div>
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Descripción corta</label>
-                                <input type="text" name="description" class="form-control">
+                                <input type="text" name="description" class="form-control" value="{{ $producto->description }}">
                             </div>
                         </div>
                     </div>
                     <div class="form-group bmd-form-group">
                         <label class="bmd-label-floating">Precio</label>
-                        <input type="number" name="precio" class="form-control">
+                        <input type="number" name="price" class="form-control" value="{{ $producto->price }}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Descripción extensa del producto</label>
-                        <textarea class="form-control" name="long_description" id="long_description" rows="3" ></textarea>
+                        <label for="long_description">Descripción extensa del producto</label>
+                        <textarea class="form-control" name="long_description" id="long_description" rows="3" >{{ $producto->long_description }}</textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Registrar producto</button>
