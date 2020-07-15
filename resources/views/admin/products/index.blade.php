@@ -45,9 +45,9 @@
                                     <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
                                         <i class="fa fa-user"></i>
                                     </button>
-                                    <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
                                         <i class="fa fa-edit"></i>
-                                    </button>
+                                    </a>
                                     <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
                                         <i class="fa fa-times"></i>
                                     </button>
