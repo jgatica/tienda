@@ -31,4 +31,14 @@ class ProductController extends Controller
         //return redirect()->back();
         return redirect('/admin/products');
     }
+
+    public function edit()
+    {
+        
+    }
+
+    public function update()
+    {
+        
+    }
 }
