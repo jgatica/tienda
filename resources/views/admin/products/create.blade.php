@@ -25,21 +25,25 @@
     {{--contenido para el landing--}}
     <div class="main main-raised">
         <div class="container">
-            <div class="section text-center">
-                <h2 class="title">Registrar nuevo producto</h2>
+            <div class="section">
+                <h2 class="title text-center">Registrar nuevo producto</h2>
                 <form method="post" action="{{ url('/admin/products') }}" >
                     @csrf
              {{--       $table->string('name');
                     $table->string('description');
                     $table->text('long_description')->nullable();
                     $table->float('price');--}}
-                    <div class="form-group bmd-form-group">
-                        <label class="bmd-label-floating">Nombre del producto</label>
-                        <input type="text" name="name" class="form-control">
-                    </div>
-                    <div class="form-group bmd-form-group">
-                        <label class="bmd-label-floating">Descripción corta</label>
-                        <input type="text" name="description" class="form-control">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Nombre del producto</label>
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Descripción corta</label>
+                                <input type="text" name="description" class="form-control">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group bmd-form-group">
                         <label class="bmd-label-floating">Precio</label>

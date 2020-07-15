@@ -20,6 +20,6 @@ class ProductController extends Controller
 
     public function store()
     {
-
+        return "guardando producto";
     }
 }
