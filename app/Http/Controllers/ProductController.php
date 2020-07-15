@@ -38,8 +38,17 @@ class ProductController extends Controller
         return view('admin.products.edit', compact('producto'));
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
+        // Se actualiza el producto
+        $producto = Product::find($id);
+        $producto->name = $request->input('name');
+        $producto->description = $request->input('description');
+        $producto->price = $request->input('price');
+        $producto->long_description = $request->input('long_description');
+        $producto->save();
+
+        return redirect('/admin/products');
 
     }
 }
