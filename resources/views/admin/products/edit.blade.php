@@ -19,7 +19,7 @@
         <div class="container">
             <div class="section">
                 <h2 class="title text-center">Registrar nuevo producto</h2>
-                <form method="post" action="{{ url('/admin/products/'.$producto->name.'/update') }}" >
+                <form method="post" action="{{ url('/admin/products/'.$producto->id.'/edit') }}" >
                     @csrf
              {{--       $table->string('name');
                     $table->string('description');
@@ -46,7 +46,8 @@
                         <textarea class="form-control" name="long_description" id="long_description" rows="3" >{{ $producto->long_description }}</textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Registrar producto</button>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    <a href="{{ url('/admin/products') }}" class="btn btn-danger">Cancelar</a>
 
                 </form>
             </div>
