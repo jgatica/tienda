@@ -32,13 +32,14 @@ class ProductController extends Controller
         return redirect('/admin/products');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        
+        $producto = Product::find($id);
+        return view('admin.products.edit');
     }
 
     public function update()
     {
-        
+
     }
 }
