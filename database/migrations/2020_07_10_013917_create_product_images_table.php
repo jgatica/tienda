@@ -21,7 +21,7 @@ class CreateProductImagesTable extends Migration
 
             //FK
             $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 
         });
     }
