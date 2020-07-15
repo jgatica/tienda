@@ -39,7 +39,7 @@
                                 <td class="text-center">{{ $producto->id }}</td>
                                 <td>{{ $producto->name }}</td>
                                 <td>{{ $producto->description }}</td>
-                                <td>{{ $producto->category->name }}</td>
+                                <td>{{ $producto->category->name?? '' }}</td>
                                 <td class="text-right">&euro; {{ $producto->price }}</td>
                                 <td class="td-actions text-right">
                                     <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
