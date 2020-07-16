@@ -29,14 +29,14 @@
                         <div class="col-md-6">
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Nombre del producto</label>
-                                <input type="text" name="name" class="form-control" value="{{ $producto->name }}">
+                                <input type="text" name="name" class="form-control" value="{{ old('name', $producto->name) }}">
                                 @error('name')
                                 <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Descripción corta</label>
-                                <input type="text" name="description" class="form-control" value="{{ $producto->description }}">
+                                <input type="text" name="description" class="form-control" value="{{ old('description', $producto->description) }}">
                                 @error('description')
                                 <small class="text-danger">{{ $message }}</small>
                                 @enderror
@@ -45,14 +45,14 @@
                     </div>
                     <div class="form-group bmd-form-group">
                         <label class="bmd-label-floating">Precio</label>
-                        <input type="number" name="price" class="form-control" value="{{ $producto->price }}">
+                        <input type="number" name="price" class="form-control" value="{{ old('price', $producto->price) }}">
                         @error('price')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="long_description">Descripción extensa del producto</label>
-                        <textarea class="form-control" name="long_description" id="long_description" rows="3" >{{ $producto->long_description }}</textarea>
+                        <textarea class="form-control" name="long_description" id="long_description" rows="3" >{{ old('long_description', $producto->long_description) }}</textarea>
                         @error('long_description')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
