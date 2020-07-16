@@ -21,21 +21,34 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         // Validar
+
+        // Reglas
         $rules = [
             'name' => 'required|min:3',
             'description' => 'required|max:200',
-            'precio' => 'required|numeric|min:0',
+            'price' => 'required|numeric|min:0',
             'long_description' => 'required',
         ];
 
-        $this->validate($request, $rules);
+        // Mensajes personalizados
+        $messages = [
+            'name.required' => 'Es necesario ingresar un nombre para el producto',
+            'name.min' => 'El nombre del producto debe tener al menos 3 caracteres',
+            'description.required' => 'La descripción corta es un campo obligatorio',
+            'description.max' => 'La descripción corta solo admite hasta 200 caracteres',
+            'price.required' => 'Es obligatorio definir un precio para el producto',
+            'price.numeric' => 'Ingrese un precio válido',
+            'price.min' => 'No se admiten valores negativos',
+        ];
+
+        $this->validate($request, $rules, $messages);
 
 
         // Registrar producto en la BD
         $producto = new Product();
         $producto->name = $request->input('name');
         $producto->description = $request->input('description');
-        $producto->price = $request->input('precio');
+        $producto->price = $request->input('price');
         $producto->long_description = $request->input('long_description');
         $producto->save();
 

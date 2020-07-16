@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group bmd-form-group">
                         <label class="bmd-label-floating">Precio</label>
-                        <input type="number" name="precio" class="form-control">
+                        <input type="number" name="price" class="form-control">
                         @error('precio')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
