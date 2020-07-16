@@ -20,6 +20,17 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        // Validar
+        $rules = [
+            'name' => 'required|min:3',
+            'description' => 'required|max:200',
+            'precio' => 'required|numeric|min:0',
+            'long_description' => 'required',
+        ];
+
+        $this->validate($request, $rules);
+
+
         // Registrar producto en la BD
         $producto = new Product();
         $producto->name = $request->input('name');

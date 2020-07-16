@@ -38,20 +38,32 @@
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Nombre del producto</label>
                                 <input type="text" name="name" class="form-control">
+                                @error('name')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Descripción corta</label>
                                 <input type="text" name="description" class="form-control">
+                                @error('description')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                         </div>
                     </div>
                     <div class="form-group bmd-form-group">
                         <label class="bmd-label-floating">Precio</label>
                         <input type="number" name="precio" class="form-control">
+                        @error('precio')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripción extensa del producto</label>
                         <textarea class="form-control" name="long_description" id="long_description" rows="3" ></textarea>
+                        @error('long_description')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
 
                     <button type="submit" class="btn btn-primary">Registrar producto</button>
