@@ -42,15 +42,15 @@
                                 <td>{{ $producto->category->name?? '' }}</td>
                                 <td class="text-right">&euro; {{ $producto->price }}</td>
                                 <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                                        <i class="fa fa-user"></i>
-                                    </button>
-                                    <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
                                     <form action="{{ url('/admin/products/'.$producto->id.'/delete') }}" method="post">
                                         @csrf
                                         @method('DELETE')
+                                        <a href="#" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-user"></i>
+                                        </a>
+                                        <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
                                         <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
                                             <i class="fa fa-times"></i>
                                         </button>
