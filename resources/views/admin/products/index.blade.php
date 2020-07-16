@@ -50,6 +50,7 @@
                                     </a>
                                     <form action="{{ url('/admin/products/'.$producto->id.'/delete') }}" method="post">
                                         @csrf
+                                        @method('DELETE')
                                         <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
                                             <i class="fa fa-times"></i>
                                         </button>
