@@ -20,8 +20,12 @@
                 <div class="team">
                     <div class="row">
 
-                        <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round">Subir nueva imagen</a>
-                        <a href="{{ url('/admin/products/') }}" class="btn btn-default btn-round">Volver al listado de productos</a>
+                        <form method="post" action="">
+                            @csrf
+                            <input type="file" name="photo" required>
+                            <button type="submit" class="btn btn-primary btn-round">Subir nueva imagen</button>
+                            <a href="{{ url('/admin/products/') }}" class="btn btn-default btn-round">Volver al listado de productos</a>
+                        </form>
 
                         <div class="card-deck">
                             @foreach($imagenes as $imagen)
@@ -30,6 +34,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <button type="submit" class="btn btn-danger btn-round">Eliminar imagen</button>
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -37,49 +42,6 @@
                             </div>
                             @endforeach
                         </div>
-
-                        {{--<table class="table">
-                            <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th >Nombre</th>
-                                <th>Descripcion</th>
-                                <th>Categoria</th>
-                                <th>Precio</th>
-                                <th class="w-25">Acciones</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($productos as $producto)
-                            <tr>
-                                <td class="text-center">{{ $producto->id }}</td>
-                                <td>{{ $producto->name }}</td>
-                                <td>{{ $producto->description }}</td>
-                                <td>{{ $producto->category->name?? '' }}</td>
-                                <td class="text-right">&euro; {{ $producto->price }}</td>
-                                <td class="td-actions text-right">
-                                    <form action="{{ url('/admin/products/'.$producto->id.'/delete') }}" method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <a href="#" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                        <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Imágenes del producto" class="btn btn-warning btn-simple btn-xs">
-                                            <i class="fa fa-image"></i>
-                                        </a>
-                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
-                            @endforeach
-                            </tbody>
-                        </table>--}}
-                        {{--{{ $productos->links() }}--}}
 
                     </div>
                 </div>
