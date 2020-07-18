@@ -22,6 +22,21 @@
 
                         <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round">Subir nueva imagen</a>
 
+                        <div class="card-deck">
+                            @foreach($imagenes as $imagen)
+                            <div class="card">
+                                <img class="card-img-top" src="{{ $imagen->image }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
                         {{--<table class="table">
                             <thead>
                             <tr>
