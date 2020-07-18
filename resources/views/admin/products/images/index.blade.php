@@ -21,6 +21,7 @@
                     <div class="row">
 
                         <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round">Subir nueva imagen</a>
+                        <a href="{{ url('/admin/products/') }}" class="btn btn-default btn-round">Volver al listado de productos</a>
 
                         <div class="card-deck">
                             @foreach($imagenes as $imagen)
