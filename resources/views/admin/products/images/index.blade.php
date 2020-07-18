@@ -16,7 +16,7 @@
         <div class="container">
 
             <div class="section text-center">
-                <h2 class="title">Imágenes de producto seleccionado</h2>
+                <h2 class="title">Imágenes de producto: "{{ $producto->name }}"</h2>
                 <div class="team">
                     <div class="row">
 
