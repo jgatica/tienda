@@ -51,6 +51,9 @@
                                         <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
                                             <i class="fa fa-edit"></i>
                                         </a>
+                                        <a href="{{ url('/admin/products/'.$producto->id.'/edit') }}" rel="tooltip" title="Imágenes del producto" class="btn btn-warning btn-simple btn-xs">
+                                            <i class="fa fa-image"></i>
+                                        </a>
                                         <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
                                             <i class="fa fa-times"></i>
                                         </button>
