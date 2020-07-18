@@ -71,6 +71,10 @@ The above copyright notice and this permission notice shall be included in all c
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-with-icons">
+                            {{--Item de menu--}}
+                            <a href="{{ url('admin/products') }}" class="dropdown-item">
+                                <i class="material-icons">layers</i> Gestionar productos
+                            </a>
                             <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                 <i class="material-icons">layers</i> Desconectar
