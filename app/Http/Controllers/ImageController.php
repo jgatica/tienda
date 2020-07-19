@@ -25,14 +25,16 @@ class ImageController extends Controller
         $file = $request->file('photo');
         $path = public_path() . '/images/products';
         $fileName = uniqid() . $file->getClientOriginalName();
-        $file->move($path, $fileName);
+        $move  = $file->move($path, $fileName);
 
         // Crear 1 registro en la tabla product_images
-        $productImage = new ProductImage();
-        $productImage->image = $fileName;
-        $productImage->feature = false;
-        $productImage->product_id = $id;
-        $productImage->save();
+        if ($move) {
+            $productImage = new ProductImage();
+            $productImage->image = $fileName;
+            $productImage->feature = false;
+            $productImage->product_id = $id;
+            $productImage->save();
+        }
 
         return back();
     }
