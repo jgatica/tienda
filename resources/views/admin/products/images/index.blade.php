@@ -20,7 +20,7 @@
                 <div class="team">
                     <div class="row">
 
-                        <form method="post" action="">
+                        <form method="post" action="" enctype="multipart/form-data">
                             @csrf
                             <input type="file" name="photo" required>
                             <button type="submit" class="btn btn-primary btn-round">Subir nueva imagen</button>
@@ -30,7 +30,7 @@
                         <div class="card-deck">
                             @foreach($imagenes as $imagen)
                             <div class="card">
-                                <img class="card-img-top" src="{{ $imagen->image }}" alt="Card image cap">
+                                <img class="card-img-top" src="{{ $imagen->url }}" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
