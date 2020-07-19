@@ -40,6 +40,18 @@
                                         @method('DELETE')
                                         <input type="hidden" name="image_id" value="{{ $imagen->id }}">
                                         <button type="submit" class="btn btn-danger btn-round">Eliminar imagen</button>
+                                        @if ($imagen->featured)
+                                            <button type="button" class="btn btn-primary btn-fab btn-round">
+                                                <i class="material-icons">favorite</i>
+                                                <div class="ripple-container"></div>
+                                            </button>
+                                        @else
+                                            <a href="{{ url('admin/products/'.$producto->id.'/images/select/'. $imagen->id) }}" class="btn btn-default btn-fab btn-round">
+                                                <i class="material-icons">favorite</i>
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        @endif
+
                                     </form>
                                 </div>
                                 <div class="card-footer">
