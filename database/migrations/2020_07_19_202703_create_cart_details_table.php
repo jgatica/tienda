@@ -15,7 +15,17 @@ class CreateCartDetailsTable extends Migration
     {
         Schema::create('cart_details', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('quantity');
+            $table->integer('discount'); // sera en porcentaje (% int)
             $table->timestamps();
+
+            // FK carts
+            $table->unsignedBigInteger('cart_id');
+            $table->foreign('cart_id')->references('id')->on('carts');
+
+            // FK products
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
