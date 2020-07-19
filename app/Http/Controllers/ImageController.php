@@ -32,7 +32,7 @@ class ImageController extends Controller
         if ($move) {
             $productImage = new ProductImage();
             $productImage->image = $fileName;
-            $productImage->feature = false;
+            $productImage->featured = false;
             $productImage->product_id = $id;
             $productImage->save();
         }
