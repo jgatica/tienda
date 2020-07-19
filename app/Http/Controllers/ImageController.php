@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\ProductImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ImageController extends Controller
 {
@@ -39,8 +40,24 @@ class ImageController extends Controller
         return back();
     }
 
-    public function destroy()
+    public function destroy(Request $request, $id)
     {
+        // Eliminar archivo
+        $productoImage = ProductImage::find($request->input('image_id'));
+
+        if (substr($productoImage->image, 0, 4) == 'http') {
+            $deleted = true;
+        } else {
+            $fullPath = public_path() . '/images/products/' . $productoImage->image;
+            $deleted = File::delete($fullPath);
+        }
+
+        // Eliminar el registro de la imagen en la base de datos
+        if ($deleted) {
+            $productoImage->delete();
+        }
+
+        return back();
 
     }
 }
