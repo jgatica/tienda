@@ -16,7 +16,7 @@ class CreateProductImagesTable extends Migration
         Schema::create('product_images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('image');
-            $table->boolean('feature')->default(false);
+            $table->boolean('featured')->default(false);
             $table->timestamps();
 
             //FK
