@@ -12,7 +12,7 @@ class ImageController extends Controller
     public function index($id)
     {
         $producto = Product::find($id);
-        $imagenes = $producto->images;
+        $imagenes = $producto->images()->orderBy('featured', 'desc')->get();
         return view('admin.products.images.index', compact('producto','imagenes'));
     }
 
