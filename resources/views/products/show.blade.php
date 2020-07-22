@@ -14,11 +14,11 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <div class="profile">
                             <div class="avatar">
-                                <img src="{{ asset('assets/material-kit/img/faces/christian.jpg') }}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                                <img src="{{ $producto->featured_image_url }}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                             </div>
                             <div class="name">
-                                <h3 class="title">Christian Louboutin</h3>
-                                <h6>Designer</h6>
+                                <h3 class="title">{{ $producto->name }}</h3>
+                                <h6>{{ $producto->category->name }}</h6>
                                 <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                                 <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
                                 <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
@@ -27,7 +27,9 @@
                     </div>
                 </div>
                 <div class="description text-center">
-                    <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+                    <p>
+                        {{ $producto->long_description }}
+                    </p>
                 </div>
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto">
