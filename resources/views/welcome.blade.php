@@ -75,7 +75,8 @@
                                     <div class="col-md-6 ml-auto mr-auto">
                                         <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                                     </div>
-                                    <h4 class="card-title">{{ $product->name }}
+                                    <h4 class="card-title">
+                                        <a href="{{ url('/products/'.$product->id) }}">{{ $product->name }}</a>
                                         <br>
                                         <small class="card-description text-muted">{{ $product->category->name }}</small>
                                     </h4>
