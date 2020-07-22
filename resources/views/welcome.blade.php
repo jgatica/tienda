@@ -94,6 +94,9 @@
                             </div>
                         </div>
                         @endforeach
+                    </div>
+                    {{ $products->links() }}
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="team-player">
                                 <div class="card card-plain">
@@ -138,6 +141,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="section section-contacts">
