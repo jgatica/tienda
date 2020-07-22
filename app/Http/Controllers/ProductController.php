@@ -8,6 +8,6 @@ class ProductController extends Controller
 {
     public function show($id)
     {
-        return "Mostrar datos del producto $id";
+        return view('products.show');
     }
 }
