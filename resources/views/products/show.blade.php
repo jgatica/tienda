@@ -14,7 +14,7 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <div class="profile">
                             <div class="avatar">
-                                <img src="../assets/img/faces/christian.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                                <img src="{{ asset('assets/material-kit/img/faces/christian.jpg') }}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                             </div>
                             <div class="name">
                                 <h3 class="title">Christian Louboutin</h3>
@@ -56,12 +56,12 @@
                     <div class="tab-pane active text-center gallery" id="studio">
                         <div class="row">
                             <div class="col-md-3 ml-auto">
-                                <img src="../assets/img/examples/studio-1.jpg" class="rounded">
-                                <img src="../assets/img/examples/studio-2.jpg" class="rounded">
+                                <img src="{{ asset('assets/material-kit/img/examples/studio-1.jpg') }}" class="rounded">
+                                <img src="{{ asset('assets/material-kit/img/examples/studio-2.jpg') }}" class="rounded">
                             </div>
                             <div class="col-md-3 mr-auto">
-                                <img src="../assets/img/examples/studio-5.jpg" class="rounded">
-                                <img src="../assets/img/examples/studio-4.jpg" class="rounded">
+                                <img src="{{ asset('assets/material-kit/img/examples/studio-5.jpg') }}" class="rounded">
+                                <img src="{{ asset('assets/material-kit/img/examples/studio-4.jpg') }}" class="rounded">
                             </div>
                         </div>
                     </div>
