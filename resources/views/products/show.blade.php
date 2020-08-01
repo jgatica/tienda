@@ -33,7 +33,7 @@
                 </div>
                 <div class="row">
                     <div class="text-center">
-                        <button class="btn btn-primary btn-round">
+                        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalAddToCar">
                             <i class="material-icons">add</i> Añadir al carro
                             <div class="ripple-container"></div>
                         </button>
@@ -53,6 +53,29 @@
         </div>
     </div>
 
-
+    {{--Modal para añadir al carro de compras--}}
+    <!-- Modal -->
+    <div class="modal fade" id="modalAddToCar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Seleccione la cantidqd que desea agregar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="" method="post" >
+                    <div class="modal-body">
+                        <input type="number" name="quantity" value="1" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{--Modal para añadir al carro de compras--}}
     @include('includes.footer')
 @endsection
