@@ -31,6 +31,14 @@
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-round">
+                            <i class="material-icons">add</i> Añadir al carro
+                            <div class="ripple-container"></div>
+                        </button>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-md-12">
