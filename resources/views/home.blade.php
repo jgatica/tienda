@@ -62,6 +62,12 @@
                             Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
                             <br><br>
                             Dramatically visualize customer directed convergence without revolutionary ROI.
+
+                            @foreach(auth()->user()->cart->details as $detail)
+                                <ul>
+                                    <li>{{ $detail }}</li>
+                                </ul>
+                            @endforeach
                         </div>
                         <div class="tab-pane" id="schedule-1">
                             Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.

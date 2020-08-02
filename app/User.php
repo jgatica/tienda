@@ -42,13 +42,13 @@ class User extends Authenticatable
         return $this->hasMany(Cart::class);
     }
 
-    // Accesor para el campo cart_id
-    public function getCartIdAttribute()
+    // Accesor para el campo cart
+    public function getCartAttribute()
     {
         $cart = $this->carts()->where('status', 'Active')->first();
 
         if ($cart) {
-            return $cart->id;
+            return $cart;
         }
 
         $cart = new Cart();
@@ -56,6 +56,6 @@ class User extends Authenticatable
         $cart->user_id = $this->id;
         $cart->save();
 
-        return $cart->id;
+        return $cart;
     }
 }
