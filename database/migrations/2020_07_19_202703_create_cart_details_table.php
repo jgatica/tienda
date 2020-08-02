@@ -16,7 +16,7 @@ class CreateCartDetailsTable extends Migration
         Schema::create('cart_details', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('quantity');
-            $table->integer('discount'); // sera en porcentaje (% int)
+            $table->integer('discount')->default(0); // sera en porcentaje (% int)
             $table->timestamps();
 
             // FK carts
