@@ -63,11 +63,47 @@
                             <br><br>
                             Dramatically visualize customer directed convergence without revolutionary ROI.
 
-                            @foreach(auth()->user()->cart->details as $detail)
-                                <ul>
-                                    <li>{{ $detail }}</li>
-                                </ul>
-                            @endforeach
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">#</th>
+                                        <th >Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                        <th class="w-25">Acciones</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach(auth()->user()->cart->details as $detail)
+                                        <tr>
+                                            <td class="text-center">
+                                                <img src="{{ $detail->product->featured_image_url }}" alt="" height="50px">
+                                            </td>
+                                            <td>
+                                                <a href="{{ url('product/'.$detail->product->id) }}">
+                                                    {{ $detail->product->name }}
+                                                </a>
+                                            </td>
+                                            <td>&euro; {{ $detail->product->price }}</td>
+                                            <td class="text-right">{{ $detail->quantity }}</td>
+                                            <td class="text-right">{{ $detail->quantity * $detail->product->price }}</td>
+                                            <td class="td-actions text-right">
+                                                <form action="{{ url('/admin/products/'.$detail->product->id.'/delete') }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <a href="#" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-info"></i>
+                                                    </a>
+                                                    <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
                         </div>
                         <div class="tab-pane" id="schedule-1">
                             Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
