@@ -71,6 +71,9 @@ The above copyright notice and this permission notice shall be included in all c
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-with-icons">
+                            <a href="{{ url('home') }}" class="dropdown-item">
+                                <i class="material-icons">layers</i> Dashboard
+                            </a>
                             @if (auth()->user()->admin)
                                 {{--Item de menu--}}
                                 <a href="{{ url('admin/products') }}" class="dropdown-item">
