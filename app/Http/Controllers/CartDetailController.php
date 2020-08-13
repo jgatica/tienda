@@ -21,7 +21,10 @@ class CartDetailController extends Controller
     public function destroy(Request $request)
     {
         $cartDetail = CartDetail::find($request->cart_detail_id);
-        $cartDetail->delete();
+
+        // Evitar que un usuario elimine el producto de añadido en el pedido de otro usuario
+        if ($cartDetail->cart_id == auth()->user()-cart->idate();
+            $cartDetail->delete();
 
         return back();
     }
