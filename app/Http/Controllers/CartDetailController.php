@@ -15,7 +15,8 @@ class CartDetailController extends Controller
         $cartDetail->quantity = $request->quantity;
         $cartDetail->save();
 
-        return back();
+        $notificacion = "El producto se ha cargado a tu carrito de compras exitosamente!";
+        return back()->with(compact('notificacion'));
     }
 
     public function destroy(Request $request)

@@ -24,6 +24,11 @@
                                 <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
                             </div>
                         </div>
+                        @if (session('notificacion'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('notificacion') }}
+                            </div>
+                        @endif
                     </div>
                     <div class="description text-center">
                         <p>
