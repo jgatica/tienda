@@ -89,9 +89,10 @@
                                             <td class="text-right">{{ $detail->quantity }}</td>
                                             <td class="text-right">{{ $detail->quantity * $detail->product->price }}</td>
                                             <td class="td-actions text-right">
-                                                <form action="{{ url('/admin/products/'.$detail->product->id.'/delete') }}" method="post">
+                                                <form action="{{ url('/cart/') }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
+                                                    <input type="hidden" name="cart_detail_id" value="{{ $detail->id }}">
                                                     <a href="#" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-info"></i>
                                                     </a>
