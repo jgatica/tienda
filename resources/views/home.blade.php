@@ -27,9 +27,9 @@
         <div class="container">
             <div class="section">
                 <h2 class="title text-center">Dashboad</h2>
-                @if (session('status'))
+                @if (session('notificacion'))
                     <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                        {{ session('notificacion') }}
                     </div>
                 @endif
 
