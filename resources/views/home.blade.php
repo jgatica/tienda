@@ -59,9 +59,7 @@
                     </ul>
                     <div class="tab-content tab-space">
                         <div class="tab-pane active show" id="dashboard-1">
-                            Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-                            <br><br>
-                            Dramatically visualize customer directed convergence without revolutionary ROI.
+                            <p>Tu carrito de compras presenta {{ auth()->user()->cart->details->count() }} productos. </p>
 
                                 <table class="table">
                                     <thead>
