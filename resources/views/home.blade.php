@@ -103,6 +103,12 @@
                                     @endforeach
                                     </tbody>
                                 </table>
+                            <form method="post" action="{{ url('/order') }}">
+                                @csrf
+                                <button class="btn btn-primary btn-round">
+                                    <i class="material-icons">done</i> Realizar pedido
+                                </button>
+                            </form>
                         </div>
                         <div class="tab-pane" id="schedule-1">
                             Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
